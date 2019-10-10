@@ -1,0 +1,22 @@
+{
+  "name": "spotyourmusic",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B.git"
+  },
+  "keywords": [
+    "music"
+  ],
+  "author": "Sjoerd Daniel Maxi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B/issues"
+  },
+  "homepage": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B#readme"
+}
