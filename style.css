@@ -1,3 +1,8 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
 header {
     height: 15%;
     display: flex;
@@ -16,7 +21,7 @@ header {
 
 #top_right {
     float: right;
-    flex-direction: right;    
+    flex-direction: right;
 }
 
 #top_right ul {
@@ -44,16 +49,16 @@ main {
 }
 
 .button {
-    -webkit-border-radius: 28;  
-    -moz-border-radius: 28;  
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
     border-radius: 28px;
     background: transparent;
     border: 2px solid #0099CC;
 }
 
-.button:hover {      
-    background-color: #008CBA;      
-    color: white; 
+.button:hover {
+    background-color: #008CBA;
+    color: white;
 }
 
 footer {
@@ -68,6 +73,15 @@ footer {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 1%;
+}
+
+#bottom_left ul{
+    display: flex;
+    list-style: none;
+}
+
+#bottom_left ul li{
+    padding: 5px;
 }
 
 #bottom_middle {
