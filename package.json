@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B.git"
+    "url": "git+https://github.com/DRohmann/WebEntwicklung.git"
   },
   "keywords": [
     "music"
@@ -16,9 +16,9 @@
   "author": "Sjoerd Daniel Maxi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B/issues"
+    "url": "https://github.com/DRohmann/WebEntwicklung.git/issues"
   },
-  "homepage": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B#readme",
+  "homepage": "https://github.com/DRohmann/WebEntwicklung.git#readme",
   "dependencies": {
     "navigo": "^7.1.2"
   }
