@@ -68,6 +68,7 @@
         </footer>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
         import * as firebase from "firebase/app";
 
         <!-- Add the Firebase services that you want to use -->
@@ -86,6 +87,8 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+
+        var db = firebase.firestore();
         </script>
     </body>
 </html>
