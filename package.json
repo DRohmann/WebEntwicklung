@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B/issues"
   },
-  "homepage": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B#readme"
+  "homepage": "https://github.com/DRohmann/WebEntwicklung.git%1B%5BD%1B#readme",
+  "dependencies": {
+    "navigo": "^7.1.2"
+  }
 }
