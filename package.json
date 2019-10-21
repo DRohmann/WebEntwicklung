@@ -21,5 +21,8 @@
   "homepage": "https://github.com/DRohmann/WebEntwicklung.git#readme",
   "dependencies": {
     "navigo": "^7.1.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
