@@ -42,6 +42,10 @@ main h1 {
     margin: 0;
 }
 
+main .hidden{
+    display:none;
+}
+
 #start_top {
     text-align: center;
 }
