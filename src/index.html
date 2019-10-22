@@ -40,7 +40,7 @@
                     <input type="search" placeholder="Search packages"/>
                 </div>
                 <div class="search" id="search_middle">
-                    <textarea id="search_textare" name="text" cols="35" rows="4"></textarea>
+                    <textarea id="search_textarea" name="text" cols="35" rows="4"></textarea>
                 </div>
                 <div class="search" id="search_bottom">
                     <button class="button" type="button" name="search_b_start">Zurück zur Startseite!</button>
@@ -50,15 +50,38 @@
 
             <section id="section_editpage">
                 <div class="editpage" id="editpage_middle_left">
-                    
+                    <table>
+                        <tr>
+                            <td id="cell_title">Titel :</td>
+                            <td id="cell_title_value"></td>
+                        </tr>
+                        <tr>
+                            <td id="cell_interpret">Interpret :</td>
+                            <td id="cell_interpret_value"></td>
+                        </tr>
+                        <tr>
+                            <td id="cell_genre">Genre :</td>
+                            <td id="cell_genre_value"></td>
+                        </tr>
+                        <tr>
+                            <td id="cell_youtube">Youtube-Link :</td>
+                            <td id="cell_youtube_value"></td>
+                        </tr>
+                        <tr>
+                            <td id="cell_lycris">Liedtext :</td>
+                            <td id="cell_lycris_value"></td>
+                        </tr>
+                    </table>
                 </div>
                 <div class="editpage" id="editpage_middle_right">
-
+                    <button class="button" type="button" name="search_b_safe">Speicher dein Ding!</button>
+                </br>
+                    <button class="button" type="button" name="search_b_abort">Doch alles verwerfen!</button>
                 </div>
             </section>
 
             <section id="section_titlepage">
-
+                
             </section>
         </main>
 
