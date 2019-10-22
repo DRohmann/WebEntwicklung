@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/DRohmann/WebEntwicklung.git#readme",
   "dependencies": {
+    "database.js": "0.0.1",
     "firebase": "^7.2.1",
     "navigo": "^7.1.2"
   },
