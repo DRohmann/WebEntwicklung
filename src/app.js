@@ -1,20 +1,14 @@
 "use strict"
 
-import stylesheet from "./app.css";
+// import stylesheet from "./app.css";
 
 import Navigo from "navigo/lib/navigo.js";
-import DB from "./database.js";
+//import DB from "./database.js";
 
-import EditPage from "./section_editpage/edit-page.js";
 import HomePage from "./section_homepage/home-page.js";
+import EditPage from "./section_editpage/edit-page.js";
 import SearchPage from "./section_searchpage/search-page.js";
 import TitlePage from "./section_titlepage/title-page.js";
-
-import * as firebase from "firebase/app";
-
-// Add the Firebase services that you want to use
-import "firebase/firestore";
-
 
 class App {
     constructor() {
@@ -30,11 +24,10 @@ class App {
         this._router.on({
           "*":                    () => this.showStartPage(),
           "/":                    () => this.showStartPage(),
-          "/my-receipes":         () => this.showMyReceipes(),
-          "/new":                 () => this.showNewReceipePage(),
-          "/show":   (params, query) => this.showReceipePage(query),
-          "/edit":           (query) => this.showReceipePage(query),
-          "/receipe/delete/:id":params => this.deleteReceipePage(params.id)
+          "/search":              () => this.showSearchPage(),
+          "/new":                 () => this.showEditPage(),
+          "/edit":           (query) => this.showEditPage(query),
+          "/title":   (params, query) => this.showTitlePage(query)
         });
     
         this._router.hooks({
@@ -57,35 +50,26 @@ class App {
     }
   
     showStartPage() {
-      let view = new StartPage(this);
+      let view = new HomePage(this);
       this._switchVisibleView(view);
     }
   
-    showMyReceipes() {
-      let view = new MyReceipes(this);
+    showSearchPage() {
+      let view = new SearchPage(this);
       this._switchVisibleView(view);
     }
   
-    showNewReceipePage() {
-      let view = new NewReceipePage(this);
+    showEditPage() {
+      let view = new EditPage(this);
       this._switchVisibleView(view);
     }
   
-    showReceipePage(query) {
+    showTitlePage(query) {
       const _query = query.split('=').map(pair => pair.split(':'));
       console.log("Showing Receipe " + _query[1]);
   
-      let view = new ReceipePage(this, _query[1][0], "display");
+      let view = new TitlePage(this, _query[1][0], "display");
       this._switchVisibleView(view);
-    }
-  
-    deleteReceipePage(id) {
-      this._db.deleteReceipe(id).then(function() {
-        console.log("Receipe " + id + "delted");
-        location.reload();
-      }).catch(function(error) {
-        console.error("Error removing document: ", error);
-      });
     }
   
     _switchVisibleView(view) {
