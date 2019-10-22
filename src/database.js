@@ -13,24 +13,24 @@ const firebaseConfig = {
     appId: "1:694274207492:web:cf9e0fcbcd61b616de6a51"
 };
 
-let db = "";
+let _db = "";
 
 class DB{
     constructor(){
         firebase.initializeApp(firebaseConfig);
-        db = firebase.firestore();
+        _db = firebase.firestore();
     }
 
     addSong(song){
-        return db.collection("Songs").add(song);
+        return _db.collection("Songs").add(song);
     }
 
     getAllSongs(){
-        return db.collection("Songs").get();
+        return _db.collection("Songs").get();
     }
 
     getSong(){
-        return db.collection("Songs").doc(id).get();
+        return _db.collection("Songs").doc(id).get();
     }
 
     findPossibleSongs(keyword){
