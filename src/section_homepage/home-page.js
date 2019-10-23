@@ -31,6 +31,8 @@ class HomePage {
     }
 
     onLoad() {
+      document.getElementById("start_b_search").addEventListener("click", () => { _app._router.navigate("/search") } );
+      document.getElementById("start_b_new").addEventListener("click", () => { _app._router.navigate("/edit") } );
       return;
     }
 

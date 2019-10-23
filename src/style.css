@@ -75,6 +75,10 @@ main .hidden{
     background: transparent;
 }
 
+.link_button:hover {
+    text-decoration: underline;
+}
+
 footer {
     height: 10%;
     display: flex;
