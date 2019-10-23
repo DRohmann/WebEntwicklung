@@ -7,3 +7,13 @@
     text-align: center;
     padding: 10px;
 }
+
+#section_titlepage #titlepage_flexbox{
+    display: flex;
+}
+
+#section_titlepage #titlepage_flexbox div{
+    max-width: 50%;
+}
+
+/* TODO: Abstand zwischen Einträgen in Tabelle */
