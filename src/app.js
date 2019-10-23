@@ -102,7 +102,7 @@ class App {
 
         section.classList.add("hidden");
 
-        let section2 =  document.querySelector("#section_editpage");
+        let section2 = document.querySelector("#" + content.className);
 
         section2.classList.remove("hidden");
 

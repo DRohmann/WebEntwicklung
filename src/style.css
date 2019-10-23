@@ -75,6 +75,10 @@ footer {
     display: flex;
     background-color: #f04b9d;
     font-size: 8px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 #bottom_left {
