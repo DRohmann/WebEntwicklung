@@ -50,13 +50,13 @@ class App {
     }
 
     showStartPage() {
-      //let view = new HomePage(this);
-      //this._switchVisibleView(view);
+      let view = new HomePage(this);
+      this._switchVisibleView(view);
     }
 
     showSearchPage() {
-      //let view = new SearchPage(this);
-      //this._switchVisibleView(view);
+      let view = new SearchPage(this);
+      this._switchVisibleView(view);
     }
 
     showEditPage() {
@@ -68,10 +68,10 @@ class App {
       /*
       const _query = query.split('=').map(pair => pair.split(':'));
       console.log("Showing Receipe " + _query[1]);
-
+      */
       let view = new TitlePage(this, _query[1][0], "display");
       this._switchVisibleView(view);
-      */
+
     }
 
     _switchVisibleView(view) {
@@ -146,4 +146,3 @@ class App {
     }
 }
     export default App;
-
