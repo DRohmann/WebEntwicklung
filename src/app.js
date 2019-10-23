@@ -26,8 +26,8 @@ class App {
           "/":                    () => this.showStartPage(),
           "/search":              () => this.showSearchPage(),
           "/new":                 () => this.showEditPage(),
-          "/edit":           (query) => this.showEditPage(query),
-          "/title":   (params, query) => this.showTitlePage(query)
+          "/edit":                () => this.showEditPage(),
+          "/title":               () => this.showTitlePage()
         });
 
         this._router.hooks({
@@ -66,14 +66,9 @@ class App {
       this._switchVisibleView(view);
     }
 
-    showTitlePage(query) {
-      /*
-      const _query = query.split('=').map(pair => pair.split(':'));
-      console.log("Showing Receipe " + _query[1]);
-      */
-      let view = new TitlePage(this, _query[1][0], "display");
+    showTitlePage() {
+      let view = new TitlePage(this);
       this._switchVisibleView(view);
-
     }
 
     _switchVisibleView(view) {  

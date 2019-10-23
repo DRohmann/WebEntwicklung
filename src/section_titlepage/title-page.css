@@ -1,0 +1,9 @@
+#section_titlepage td{
+    -webkit-border-radius: 30;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

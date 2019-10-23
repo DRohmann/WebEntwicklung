@@ -29,7 +29,7 @@ class DB{
         return _db.collection("Songs").get();
     }
 
-    getSong(){
+    getSong(id){
         return _db.collection("Songs").doc(id).get();
     }
 
