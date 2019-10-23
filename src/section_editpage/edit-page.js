@@ -60,11 +60,11 @@ let onFinishedLoading = (receipes) =>
       let buttons = document.querySelectorAll("#receipe_" + doc.id +" > .links a");
       buttons[0].setAttribute("href", "/receipe/show/" + doc.id);
       buttons[1].setAttribute("href", "/receipe/edit/" + doc.id);
-      buttons[2].setAttribute("href", "/receipe/delete/" + doc.id);*/
+      buttons[2].setAttribute("href", "/receipe/delete/" + doc.id);
 
+      });*/
       /*Rauskommentiert da unnötig für uns, hier würde ja dann eher
       sowas rein kommen */
-      });
 
       _app._router.updatePageLinks();
       console.log("Alle Page Links updated");
