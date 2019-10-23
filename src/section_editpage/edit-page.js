@@ -44,9 +44,9 @@ class EditPage {
   }
 }
 
-let onFinishedLoading = (receipes) =>
+let onnishedLoading = () =>
   {
-    /*receipes.forEach(function(doc) {
+      /*receipes.forEach(function(doc) {
       let list = document.getElementById("receipe-list");
       let table = document.getElementById("receipe-table");
       // doc.data() is never undefined for query doc snapshots
