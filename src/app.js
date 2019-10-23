@@ -94,14 +94,15 @@ class App {
     _switchVisibleContent(content) {
 
         console.log("_switchVisibleContent");
-        let main = document.querySelector("body > main");
-        let section = document.querySelector("body > main > section");
+        let sections = document.querySelectorAll("body > main > section");
+        
+        sections.forEach(element => {
+            element.classList.add("hidden");
+        });
+        
+        let section = document.querySelector("#" + content.className);
 
-        section.classList.add("hidden");
-
-        let section2 = document.querySelector("#" + content.className);
-
-        section2.classList.remove("hidden");
+        section.classList.remove("hidden");
 
 
         /*
