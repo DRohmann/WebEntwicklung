@@ -70,6 +70,11 @@ main .hidden{
     color: white;
 }
 
+.link_button {
+    border: 0px;
+    background: transparent;
+}
+
 footer {
     height: 10%;
     display: flex;

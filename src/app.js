@@ -49,6 +49,11 @@ class App {
       this._router.resolve();
 
       document.getElementById("top_right_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
+      document.getElementById("top_right_button_add").addEventListener("click", () => { this._router.navigate("/edit") } );
+      document.getElementById("bottom_left_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
+      document.getElementById("bottom_left_button_add").addEventListener("click", () => { this._router.navigate("/edit") } );
+      document.getElementById("headerlogo").addEventListener("click", () => { this._router.navigate("/")})
+      document.getElementById("footerlogo").addEventListener("click", () => { this._router.navigate("/")})
     }
 
     showStartPage() {

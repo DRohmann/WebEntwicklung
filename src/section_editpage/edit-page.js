@@ -32,6 +32,8 @@ class EditPage {
   }
 
   onLoad() {
+    document.getElementById("edit_b_safe").addEventListener("click", () => { _app._router.navigate("/title") } );
+    document.getElementById("edit_b_abort").addEventListener("click", () => { _app._router.navigate("/") } );
     return;
   }
 
@@ -44,9 +46,9 @@ class EditPage {
   }
 }
 
-let onFinishedLoading = (receipes) =>
+let onnishedLoading = () =>
   {
-    /*receipes.forEach(function(doc) {
+      /*receipes.forEach(function(doc) {
       let list = document.getElementById("receipe-list");
       let table = document.getElementById("receipe-table");
       // doc.data() is never undefined for query doc snapshots
