@@ -47,6 +47,8 @@ class App {
     start() {
       console.log("App started successfully :)");
       this._router.resolve();
+
+      document.getElementById("top_right_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
     }
 
     showStartPage() {
@@ -74,7 +76,7 @@ class App {
 
     }
 
-    _switchVisibleView(view) {
+    _switchVisibleView(view) {  
       let newUrl = this._router.lastRouteResolved().url;
       console.log(newUrl);
       let goon = () => {
