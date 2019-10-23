@@ -49,6 +49,8 @@ class App {
       this._router.resolve();
 
       document.getElementById("top_right_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
+      document.getElementById("headerlogo").addEventListener("click", () => { this._router.navigate("/")})
+      document.getElementById("footerlogo").addEventListener("click", () => { this._router.navigate("/")})
     }
 
     showStartPage() {
