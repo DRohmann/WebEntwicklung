@@ -15,7 +15,7 @@ class EditPage {
 
   onShow() {
     // Anzuzeigende HTML-Elemente ermitteln
-    let section = document.querySelector("section_editpage").cloneNode(true);
+    let section = document.querySelector("#section_editpage").cloneNode(true);
 
     /*_db.getAllReceipes().then(function(querySnapshot)
     {

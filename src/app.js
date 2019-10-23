@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // import stylesheet from "./app.css";
 
@@ -50,13 +50,13 @@ class App {
     }
 
     showStartPage() {
-      let view = new HomePage(this);
-      this._switchVisibleView(view);
+      //let view = new HomePage(this);
+      //this._switchVisibleView(view);
     }
 
     showSearchPage() {
-      let view = new SearchPage(this);
-      this._switchVisibleView(view);
+      //let view = new SearchPage(this);
+      //this._switchVisibleView(view);
     }
 
     showEditPage() {
@@ -65,11 +65,13 @@ class App {
     }
 
     showTitlePage(query) {
+      /*
       const _query = query.split('=').map(pair => pair.split(':'));
       console.log("Showing Receipe " + _query[1]);
 
       let view = new TitlePage(this, _query[1][0], "display");
       this._switchVisibleView(view);
+      */
     }
 
     _switchVisibleView(view) {
@@ -93,6 +95,19 @@ class App {
     }
 
     _switchVisibleContent(content) {
+
+        console.log("_switchVisibleContent");
+        let main = document.querySelector("body > main");
+        let section = document.querySelector("body > main > section");
+
+        section.classList.add("hidden");
+
+        let section2 =  document.querySelector("#section_editpage");
+
+        section2.classList.remove("hidden");
+
+
+        /*
       // <header> und <main> des HTML-Grundgerüsts ermitteln
       let app = document.querySelector("#app");
       let header = document.querySelector("#app > header");
@@ -127,5 +142,8 @@ class App {
       this._router.updatePageLinks();
       console.log("Page Links Updated");
       //end of _switchVisibleContent
+      */
     }
 }
+    export default App;
+
