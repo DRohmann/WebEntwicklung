@@ -17,13 +17,6 @@ class EditPage {
     // Anzuzeigende HTML-Elemente ermitteln
     let section = document.querySelector("#section_editpage").cloneNode(true);
 
-    /*_db.getAllReceipes().then(function(querySnapshot)
-    {
-      console.log("Receipes loaded");
-      onFinishedLoading(querySnapshot);
-    });*/
-    //Rauskommentiert da unnötig für uns, eher für Suchen- oder Startseite
-
     return {
         className: "section_editpage",
         topbar: section.querySelectorAll("header > *"),
@@ -32,7 +25,7 @@ class EditPage {
   }
 
   onLoad() {
-    document.getElementById("edit_b_safe").addEventListener("click", () => { _app._router.navigate("/title") } );
+    document.getElementById("edit_b_safe").addEventListener("click", () => { safeEventListener() } );
     document.getElementById("edit_b_abort").addEventListener("click", () => { _app._router.navigate("/") } );
     return;
   }
@@ -46,30 +39,26 @@ class EditPage {
   }
 }
 
-let onnishedLoading = () =>
+let safeEventListener = (event) =>
   {
-      /*receipes.forEach(function(doc) {
-      let list = document.getElementById("receipe-list");
-      let table = document.getElementById("receipe-table");
-      // doc.data() is never undefined for query doc snapshots
-      console.log(doc.id, " => ", doc.data().name);
+      let songTitel = document.getElementById("cell_title_value").value;
+      let songArtist = document.getElementById("cell_artist_value").value;
+      let songGenre = document.getElementById("cell_genre_value").value;
+      let songAlbum = document.getElementById("cell_album_value").value;
+      let songLyrics = document.getElementById("cell_lyrics_value").value;
+      let songYT = document.getElementById("cell_youtube_value").value;
 
-      let receipe= document.getElementById("dummy").cloneNode(true);
-      receipe.setAttribute("id", "receipe_" + doc.id);
-      table.appendChild(receipe);
+      let song = {
+          "TITEL": songTitel,
+          "ARTIST": songArtist,
+          "GENRE": songGenre,
+          "ALBUM": songAlbum,
+          "SONGTEXT": songLyrics,
+          "YT-LINK": songYT
+      };
 
-      document.querySelectorAll("#receipe_" + doc.id + " > .name")[0].textContent = doc.data().name;
-      let buttons = document.querySelectorAll("#receipe_" + doc.id +" > .links a");
-      buttons[0].setAttribute("href", "/receipe/show/" + doc.id);
-      buttons[1].setAttribute("href", "/receipe/edit/" + doc.id);
-      buttons[2].setAttribute("href", "/receipe/delete/" + doc.id);
-
-      });*/
-      /*Rauskommentiert da unnötig für uns, hier würde ja dann eher
-      sowas rein kommen */
-
-      _app._router.updatePageLinks();
-      console.log("Alle Page Links updated");
+      console.log(song);
+      _db.addSong(song).then(() => { _app._router.navigate("/title") } );
   }
 
 export default EditPage;
