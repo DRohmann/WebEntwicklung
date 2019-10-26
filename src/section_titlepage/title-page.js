@@ -33,11 +33,11 @@ class TitlePage {
         document.getElementById("title_b_start").addEventListener("click", () => { _app._router.navigate("/") } );
         document.getElementById("title_b_edit").addEventListener("click", () => {
             _app._router.navigate("/edit")
-            document.getElementById("cell_title_value").textContent = document.getElementById("title_cell_title").textContent;
-            document.getElementById("cell_artist_value").textContent = document.getElementById("title_cell_artist").textContent;
-            document.getElementById("cell_genre_value").textContent = document.getElementById("title_cell_genre").textContent;
-            document.getElementById("cell_album_value").textContent = document.getElementById("title_cell_album").textContent;
-            document.getElementById("cell_lyrics_value").textContent = document.getElementById("title_cell_lyrics").textContent;
+            document.getElementById("cell_title_value").value = document.getElementById("title_cell_title").textContent;
+            document.getElementById("cell_artist_value").value = document.getElementById("title_cell_artist").textContent;
+            document.getElementById("cell_genre_value").value = document.getElementById("title_cell_genre").textContent;
+            document.getElementById("cell_album_value").value = document.getElementById("title_cell_album").textContent;
+            document.getElementById("cell_lyrics_value").value = document.getElementById("title_cell_lyrics").textContent;
         });
       return;
     }

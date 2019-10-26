@@ -32,7 +32,14 @@ class HomePage {
 
     onLoad() {
       document.getElementById("start_b_search").addEventListener("click", () => { _app._router.navigate("/search") } );
-      document.getElementById("start_b_new").addEventListener("click", () => { _app._router.navigate("/edit") } );
+      document.getElementById("start_b_new").addEventListener("click", () => {
+          _app._router.navigate("/edit")
+          document.getElementById("cell_title_value").value = "";
+          document.getElementById("cell_artist_value").value = "";
+          document.getElementById("cell_genre_value").value = "";
+          document.getElementById("cell_album_value").value = "";
+          document.getElementById("cell_lyrics_value").value = "";
+      });
       return;
     }
 
