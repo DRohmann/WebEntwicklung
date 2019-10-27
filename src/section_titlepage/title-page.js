@@ -38,6 +38,8 @@ class TitlePage {
             document.getElementById("cell_genre_value").value = document.getElementById("title_cell_genre").textContent;
             document.getElementById("cell_album_value").value = document.getElementById("title_cell_album").textContent;
             document.getElementById("cell_lyrics_value").value = document.getElementById("title_cell_lyrics").textContent;
+            document.getElementById("cell_youtube_value").value = document.getElementById("title_cell_youtube").textContent;
+
         });
       return;
     }
@@ -59,6 +61,7 @@ class TitlePage {
         document.getElementById("title_cell_genre").textContent = doc.data().GENRE;
         document.getElementById("title_cell_album").textContent = doc.data().ALBUM;
         document.getElementById("title_cell_lyrics").textContent = doc.data().SONGTEXT;
+        document.getElementById("title_cell_youtube").textContent = doc.data().YTLINK;
     }
 
 

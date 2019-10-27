@@ -54,11 +54,14 @@ let safeEventListener = (event) =>
           "GENRE": songGenre,
           "ALBUM": songAlbum,
           "SONGTEXT": songLyrics,
-          "YT-LINK": songYT
+          "YTLINK": songYT
       };
 
       console.log(song);
-      _db.addSong(song).then(() => { _app._router.navigate("/title") } );
+      _db.addSong(song).then(() => {
+          _app._router.navigate("/title");
+
+      });
   }
 
 export default EditPage;

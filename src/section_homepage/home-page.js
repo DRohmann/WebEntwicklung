@@ -39,6 +39,7 @@ class HomePage {
           document.getElementById("cell_genre_value").value = "";
           document.getElementById("cell_album_value").value = "";
           document.getElementById("cell_lyrics_value").value = "";
+          document.getElementById("cell_youtube_value").value = "";
       });
       return;
     }
