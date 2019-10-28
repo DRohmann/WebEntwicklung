@@ -11,7 +11,6 @@
 
 #section_editpage #editpage_flexbox{
     display: flex;
-}
-#section_editpage #editpage_flexbox div{
-    max-width: 2;
+    justify-content: space-around;
+    align-items: center;
 }
