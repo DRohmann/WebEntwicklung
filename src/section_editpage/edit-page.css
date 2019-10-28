@@ -1,0 +1,17 @@
+
+#section_editpage td{
+    -webkit-border-radius: 30;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    background-color: violet;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#section_editpage #editpage_flexbox{
+    display: flex;
+}
+#section_editpage #editpage_flexbox div{
+    max-width: 2;
+}
