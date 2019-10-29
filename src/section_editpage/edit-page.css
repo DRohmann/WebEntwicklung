@@ -22,7 +22,7 @@
 #section_editpage .button{
     height: 60px;
     width: 200px;
-    margin-top: 130px;
+    margin-top: 90px;
 }
 
 input{
@@ -37,4 +37,8 @@ input{
     background: none;
     border: none;
     color: white;
+}
+
+#cell_lyrics_box{
+    width: 400px;
 }
