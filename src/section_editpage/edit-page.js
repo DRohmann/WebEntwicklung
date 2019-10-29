@@ -7,10 +7,11 @@ let _app = "";
 let _db = "";
 
 class EditPage {
-  constructor(app) {
+  constructor(app, newFlag) {
     this._app = app;
     _app = this._app;
     _db = app._db;
+    _newFlag = newFlag;
   }
 
   onShow() {
@@ -46,7 +47,7 @@ let safeEventListener = (event) =>
       let songGenre = document.getElementById("cell_genre_value").value;
       let songAlbum = document.getElementById("cell_album_value").value;
       let songLyrics = document.getElementById("cell_lyrics_value").value;
-      let songYT = "https://www.youtube.com/embed/" + document.getElementById("cell_youtube_value").value;
+      let songYT = document.getElementById("cell_youtube_value").value;
 
       let song = {
           "TITEL": songTitel,

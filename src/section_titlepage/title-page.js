@@ -5,6 +5,7 @@ import DB from "../database.js";
 
 let _app = "";
 let _db = "";
+let youtubeIdent = "";
 
 class TitlePage {
     constructor(app) {
@@ -38,8 +39,7 @@ class TitlePage {
             document.getElementById("cell_genre_value").value = document.getElementById("title_cell_genre").textContent;
             document.getElementById("cell_album_value").value = document.getElementById("title_cell_album").textContent;
             document.getElementById("cell_lyrics_value").value = document.getElementById("title_cell_lyrics").textContent;
-            document.getElementById("cell_youtube_value").value = document.getElementById("title_cell_youtube").textContent;
-
+            document.getElementById("cell_youtube_value").value = youtubeIdent;
         });
       return;
     }
@@ -61,7 +61,8 @@ class TitlePage {
         document.getElementById("title_cell_genre").textContent = doc.data().GENRE;
         document.getElementById("title_cell_album").textContent = doc.data().ALBUM;
         document.getElementById("title_cell_lyrics").textContent = doc.data().SONGTEXT;
-        document.getElementById("title_frame_youtube").src = doc.data().YTLINK;
+        youtubeIdent = doc.data().YTLINK;
+        document.getElementById("title_frame_youtube").src = "https://www.youtube.com/embed/" + youtubeIdent;
     }
 
 
