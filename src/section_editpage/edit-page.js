@@ -5,12 +5,16 @@ import DB from "../database.js";
 
 let _app = "";
 let _db = "";
+let _newFlag = "";
+let _id = "";
 
 class EditPage {
-  constructor(app) {
+  constructor(app, newFlag, id) {
     this._app = app;
     _app = this._app;
     _db = app._db;
+    _newFlag = newFlag;
+    _id = id;
   }
 
   onShow() {
@@ -25,12 +29,19 @@ class EditPage {
   }
 
   onLoad() {
+    console.log(_id);
     document.getElementById("edit_b_safe").addEventListener("click", safeEventListener);
     document.getElementById("edit_b_abort").addEventListener("click", () => { _app._router.navigate("/") } );
     return;
   }
 
   onLeave(goon) {
+      document.getElementById("cell_title_value").value = "";
+      document.getElementById("cell_artist_value").value = "";
+      document.getElementById("cell_genre_value").value = "";
+      document.getElementById("cell_album_value").value = "";
+      document.getElementById("cell_lyrics_value").value = "";
+      document.getElementById("cell_youtube_value").value = "";
     return true;
   }
 
@@ -46,10 +57,10 @@ let safeEventListener = (event) =>
       let songGenre = document.getElementById("cell_genre_value").value;
       let songAlbum = document.getElementById("cell_album_value").value;
       let songLyrics = document.getElementById("cell_lyrics_value").value;
-      let songYT = "https://www.youtube.com/embed/" + document.getElementById("cell_youtube_value").value;
+      let songYT = document.getElementById("cell_youtube_value").value;
 
       let song = {
-          "TITEL": songTitel,
+          "TITLE": songTitel,
           "ARTIST": songArtist,
           "GENRE": songGenre,
           "ALBUM": songAlbum,
@@ -58,10 +69,16 @@ let safeEventListener = (event) =>
       };
 
       console.log(song);
-      _db.addSong(song).then(() => {
-          _app._router.navigate("/title");
 
-      });
+      if (_newFlag) {
+          _db.addSong(song).then(() => {
+              _app._router.navigate("/title");
+          });
+      }else{
+          _db.updateSong(_id ,song).then(() => {
+              _app._router.navigate("/title");
+          });
+      }
   }
 
 export default EditPage;
