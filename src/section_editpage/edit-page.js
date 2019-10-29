@@ -58,6 +58,7 @@ let safeEventListener = (event) =>
       let songAlbum = document.getElementById("cell_album_value").value;
       let songLyrics = document.getElementById("cell_lyrics_value").value;
       let songYT = document.getElementById("cell_youtube_value").value;
+      let songTime = firebase.firestore.Timestamp.fromDate(new Date());
 
       let song = {
           "TITLE": songTitel,
@@ -65,7 +66,8 @@ let safeEventListener = (event) =>
           "GENRE": songGenre,
           "ALBUM": songAlbum,
           "SONGTEXT": songLyrics,
-          "YTLINK": songYT
+          "YTLINK": songYT,
+          "TIMESTAMP": songTime
       };
 
       console.log(song);
