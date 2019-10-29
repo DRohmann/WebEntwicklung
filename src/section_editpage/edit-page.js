@@ -29,6 +29,7 @@ class EditPage {
   }
 
   onLoad() {
+    console.log(_id);
     document.getElementById("edit_b_safe").addEventListener("click", safeEventListener);
     document.getElementById("edit_b_abort").addEventListener("click", () => { _app._router.navigate("/") } );
     return;
@@ -59,7 +60,7 @@ let safeEventListener = (event) =>
       let songYT = document.getElementById("cell_youtube_value").value;
 
       let song = {
-          "TITEL": songTitel,
+          "TITLE": songTitel,
           "ARTIST": songArtist,
           "GENRE": songGenre,
           "ALBUM": songAlbum,

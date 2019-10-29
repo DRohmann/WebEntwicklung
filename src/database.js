@@ -34,7 +34,7 @@ class DB{
     }
 
     updateSong(id, song){
-        return _db.collection("Songs").doc(id).set(song);
+        return _db.collection("Songs").doc(id).update(song);
     }
 
     findPossibleSongs(keyword){

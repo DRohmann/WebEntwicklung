@@ -35,7 +35,7 @@ class TitlePage {
     onLoad() {
         document.getElementById("title_b_start").addEventListener("click", () => { _app._router.navigate("/") } );
         document.getElementById("title_b_edit").addEventListener("click", () => {
-            _app._router.navigate("/edit" + _id)
+            _app._router.navigate("/edit/" + _id)
             document.getElementById("cell_title_value").value = document.getElementById("title_cell_title").textContent;
             document.getElementById("cell_artist_value").value = document.getElementById("title_cell_artist").textContent;
             document.getElementById("cell_genre_value").value = document.getElementById("title_cell_genre").textContent;

@@ -26,7 +26,7 @@ class App {
           "/":                    () => this.showStartPage(),
           "/search":              () => this.showSearchPage(),
           "/new":                 () => this.showEditPage(true, ""),
-          "/edit":              (id) => this.showEditPage(false, id),
+          "/edit/:id":      (params) => this.showEditPage(false, params.id),
           "/title":               () => this.showTitlePage()
         });
 
@@ -66,8 +66,8 @@ class App {
       this._switchVisibleView(view);
     }
 
-    showEditPage(newFlag) {
-      let view = new EditPage(this, newFlag);
+    showEditPage(newFlag, id) {
+      let view = new EditPage(this, newFlag, id);
       this._switchVisibleView(view);
     }
 
