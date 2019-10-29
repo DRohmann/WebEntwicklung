@@ -6,13 +6,15 @@ import DB from "../database.js";
 let _app = "";
 let _db = "";
 let _newFlag = "";
+let _id = "";
 
 class EditPage {
-  constructor(app, newFlag) {
+  constructor(app, newFlag, id) {
     this._app = app;
     _app = this._app;
     _db = app._db;
     _newFlag = newFlag;
+    _id = id;
   }
 
   onShow() {
@@ -66,10 +68,16 @@ let safeEventListener = (event) =>
       };
 
       console.log(song);
-      _db.addSong(song).then(() => {
-          _app._router.navigate("/title");
 
-      });
+      if (_newFlag) {
+          _db.addSong(song).then(() => {
+              _app._router.navigate("/title");
+          });
+      }else{
+          _db.updateSong(_id ,song).then(() => {
+              _app._router.navigate("/title");
+          });
+      }
   }
 
 export default EditPage;

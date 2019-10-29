@@ -25,8 +25,8 @@ class App {
           "*":                    () => this.showStartPage(),
           "/":                    () => this.showStartPage(),
           "/search":              () => this.showSearchPage(),
-          "/new":                 () => this.showEditPage(true),
-          "/edit":                () => this.showEditPage(),
+          "/new":                 () => this.showEditPage(true, ""),
+          "/edit":              (id) => this.showEditPage(false, id),
           "/title":               () => this.showTitlePage()
         });
 
