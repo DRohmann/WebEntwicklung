@@ -29,4 +29,12 @@ input{
     background: none;
     border: none;
     color: white;
+    width: 300px;
+    height: 19px;
+}
+
+#cell_lyrics_value {
+    background: none;
+    border: none;
+    color: white;
 }
