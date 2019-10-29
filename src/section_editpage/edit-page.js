@@ -5,6 +5,7 @@ import DB from "../database.js";
 
 let _app = "";
 let _db = "";
+let _newFlag = "";
 
 class EditPage {
   constructor(app, newFlag) {
@@ -32,6 +33,12 @@ class EditPage {
   }
 
   onLeave(goon) {
+      document.getElementById("cell_title_value").value = "";
+      document.getElementById("cell_artist_value").value = "";
+      document.getElementById("cell_genre_value").value = "";
+      document.getElementById("cell_album_value").value = "";
+      document.getElementById("cell_lyrics_value").value = "";
+      document.getElementById("cell_youtube_value").value = "";
     return true;
   }
 

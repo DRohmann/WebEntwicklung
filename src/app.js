@@ -49,25 +49,9 @@ class App {
       this._router.resolve();
 
       document.getElementById("top_right_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
-      document.getElementById("top_right_button_add").addEventListener("click", () => {
-          document.getElementById("cell_title_value").value = "";
-          document.getElementById("cell_artist_value").value = "";
-          document.getElementById("cell_genre_value").value = "";
-          document.getElementById("cell_album_value").value = "";
-          document.getElementById("cell_lyrics_value").value = "";
-          document.getElementById("cell_youtube_value").value = "";
-          this._router.navigate("/edit")
-      });
+      document.getElementById("top_right_button_add").addEventListener("click", () => { this._router.navigate("/new") } );
       document.getElementById("bottom_left_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
-      document.getElementById("bottom_left_button_add").addEventListener("click", () => {
-          document.getElementById("cell_title_value").value = "";
-          document.getElementById("cell_artist_value").value = "";
-          document.getElementById("cell_genre_value").value = "";
-          document.getElementById("cell_album_value").value = "";
-          document.getElementById("cell_lyrics_value").value = "";
-          document.getElementById("cell_youtube_value").value = "";
-          this._router.navigate("/edit")
-      });
+      document.getElementById("bottom_left_button_add").addEventListener("click", () => { this._router.navigate("/new") } );
       document.getElementById("headerlogo").addEventListener("click", () => { this._router.navigate("/")})
       document.getElementById("footerlogo").addEventListener("click", () => { this._router.navigate("/")})
     }
