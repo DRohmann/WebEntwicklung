@@ -55,6 +55,7 @@ class App {
           document.getElementById("cell_genre_value").value = "";
           document.getElementById("cell_album_value").value = "";
           document.getElementById("cell_lyrics_value").value = "";
+          document.getElementById("cell_youtube_value").value = "";
           this._router.navigate("/edit")
       });
       document.getElementById("bottom_left_button_search").addEventListener("click", () => { this._router.navigate("/search") } );
@@ -64,6 +65,7 @@ class App {
           document.getElementById("cell_genre_value").value = "";
           document.getElementById("cell_album_value").value = "";
           document.getElementById("cell_lyrics_value").value = "";
+          document.getElementById("cell_youtube_value").value = "";
           this._router.navigate("/edit")
       });
       document.getElementById("headerlogo").addEventListener("click", () => { this._router.navigate("/")})

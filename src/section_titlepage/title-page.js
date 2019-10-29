@@ -61,7 +61,7 @@ class TitlePage {
         document.getElementById("title_cell_genre").textContent = doc.data().GENRE;
         document.getElementById("title_cell_album").textContent = doc.data().ALBUM;
         document.getElementById("title_cell_lyrics").textContent = doc.data().SONGTEXT;
-        document.getElementById("title_cell_youtube").textContent = doc.data().YTLINK;
+        document.getElementById("title_frame_youtube").src = doc.data().YTLINK;
     }
 
 
