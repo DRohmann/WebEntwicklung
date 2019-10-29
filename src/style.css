@@ -51,13 +51,6 @@ main .hidden{
     text-align: center;
 }
 
-#start_left button {
-    margin-top: 20px;
-    margin-left: 50px;
-    margin-bottom: 70px;
-    padding: 15px;
-}
-
 .button {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;

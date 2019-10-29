@@ -1,0 +1,27 @@
+#section_homepage #section_homepage_flexbox {
+    display: flex;
+    align-content: center;
+}
+
+#start_left {
+    padding: 15%;
+}
+
+#section_homepage button {
+    padding: 15px;
+}
+
+#start_b_new {
+    margin-top: 20%;
+}
+
+#start_right {
+    width: 75%;
+    padding: 3%;
+}
+
+#section_homepage  table {
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
