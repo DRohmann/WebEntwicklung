@@ -9,10 +9,20 @@
     padding: 10px;
 }
 
+#section_editpage table{
+    border-spacing: 20px;
+}
+
 #section_editpage #editpage_flexbox{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#section_editpage .button{
+    height: 60px;
+    width: 200px;
+    margin-top: 130px;
 }
 
 input{
