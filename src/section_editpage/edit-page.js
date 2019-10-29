@@ -73,12 +73,12 @@ let safeEventListener = (event) =>
       console.log(song);
 
       if (_newFlag) {
-          _db.addSong(song).then(() => {
-              _app._router.navigate("/title");
+          _db.addSong(song).then(function(doc) {
+              _app._router.navigate("/title/" + doc.id);
           });
       }else{
           _db.updateSong(_id ,song).then(() => {
-              _app._router.navigate("/title");
+              _app._router.navigate("/title/" + _id);
           });
       }
   }
