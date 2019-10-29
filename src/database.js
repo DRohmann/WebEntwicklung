@@ -29,6 +29,10 @@ class DB{
         return _db.collection("Songs").get();
     }
 
+    getAllSongsTimestamp(){
+        return _db.collection("Songs").orderBy("TIMESTAMP", "asc").get();
+    }
+
     getSong(id){
         return _db.collection("Songs").doc(id).get();
     }

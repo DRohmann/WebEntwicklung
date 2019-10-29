@@ -33,6 +33,8 @@ class HomePage {
     onLoad() {
       document.getElementById("start_b_search").addEventListener("click", () => { _app._router.navigate("/search") } );
       document.getElementById("start_b_new").addEventListener("click", () => {_app._router.navigate("/new") } );
+
+      fillTable();
       return;
     }
 
@@ -45,30 +47,24 @@ class HomePage {
     }
   }
 
-  let onFinishedLoading = (receipes) =>
+  let fillTable = () =>
     {
-      /*receipes.forEach(function(doc) {
-        let list = document.getElementById("receipe-list");
-        let table = document.getElementById("receipe-table");
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data().name);
-
-        let receipe= document.getElementById("dummy").cloneNode(true);
-        receipe.setAttribute("id", "receipe_" + doc.id);
-        table.appendChild(receipe);
-
-        document.querySelectorAll("#receipe_" + doc.id + " > .name")[0].textContent = doc.data().name;
-        let buttons = document.querySelectorAll("#receipe_" + doc.id +" > .links a");
-        buttons[0].setAttribute("href", "/receipe/show/" + doc.id);
-        buttons[1].setAttribute("href", "/receipe/edit/" + doc.id);
-        buttons[2].setAttribute("href", "/receipe/delete/" + doc.id);
-
-        });*/
-        /*Rauskommentiert da unnötig für uns, hier würde ja dann eher
-        sowas rein kommen */
-
-        _app._router.updatePageLinks();
-        console.log("Alle Page Links updated");
+      let table = document.getElementById("start_right_title_table");
+      _db.getAllSongsTimestamp().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+          var row = document.createElement("TR");
+          var title = document.createElement("TD");
+          title.appendChild(document.createTextNode(doc.data().TITLE));
+          row.appendChild(title);
+          var artist = document.createElement("TD");
+          artist.appendChild(document.createTextNode(doc.data().ARTIST));
+          row.appendChild(artist);
+          var album = document.createElement("TD");
+          album.appendChild(document.createTextNode(doc.data().ALBUM));
+          row.appendChild(album);
+          table.appendChild(row)
+        });
+      });
     }
 
 
