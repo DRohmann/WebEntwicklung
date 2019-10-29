@@ -25,7 +25,7 @@ class EditPage {
   }
 
   onLoad() {
-    document.getElementById("edit_b_safe").addEventListener("click", () => { safeEventListener() } );
+    document.getElementById("edit_b_safe").addEventListener("click", safeEventListener);
     document.getElementById("edit_b_abort").addEventListener("click", () => { _app._router.navigate("/") } );
     return;
   }
