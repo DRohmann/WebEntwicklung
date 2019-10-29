@@ -14,3 +14,9 @@
     justify-content: space-around;
     align-items: center;
 }
+
+input{
+    background: none;
+    border: none;
+    color: white;
+}
