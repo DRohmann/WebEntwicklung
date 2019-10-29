@@ -9,11 +9,11 @@ let youtubeIdent = "";
 let _id = "";
 
 class TitlePage {
-    constructor(app) {
+    constructor(app, id) {
       this._app = app;
       _app = this._app;
       _db = app._db;
-      _id = "gRkICzgt9paeGXJ54aPS";
+      _id = id;
     }
     onShow() {
       // Anzuzeigende HTML-Elemente ermitteln

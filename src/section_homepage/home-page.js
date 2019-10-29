@@ -39,7 +39,8 @@ class HomePage {
     }
 
     onLeave(goon) {
-      return true;
+        document.getElementById("start_right_title_table").innerHTML = "";
+        return true;
     }
 
     get title() {
@@ -61,6 +62,7 @@ class HomePage {
           row.appendChild(artist);
           var album = document.createElement("TD");
           album.appendChild(document.createTextNode(doc.data().ALBUM));
+          row.addEventListener("click", () => { _app._router.navigate("/title/" + doc.id) } );
           row.appendChild(album);
           table.appendChild(row)
         });

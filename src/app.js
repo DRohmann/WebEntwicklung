@@ -27,7 +27,7 @@ class App {
           "/search":              () => this.showSearchPage(),
           "/new":                 () => this.showEditPage(true, ""),
           "/edit/:id":      (params) => this.showEditPage(false, params.id),
-          "/title":               () => this.showTitlePage()
+          "/title/:id":     (params) => this.showTitlePage(params.id)
         });
 
         this._router.hooks({
@@ -71,8 +71,8 @@ class App {
       this._switchVisibleView(view);
     }
 
-    showTitlePage() {
-      let view = new TitlePage(this);
+    showTitlePage(id) {
+      let view = new TitlePage(this, id);
       this._switchVisibleView(view);
     }
 
