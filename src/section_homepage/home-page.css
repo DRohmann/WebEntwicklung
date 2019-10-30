@@ -4,11 +4,14 @@
 }
 
 #start_left {
-    padding: 15%;
+    padding-top: 10%;
+    padding-left: 5em;
+    min-width: 20em;
 }
 
 #section_homepage button {
     padding: 15px;
+    width: 15em;
 }
 
 #start_b_new {
@@ -17,7 +20,8 @@
 
 #start_right {
     width: 75%;
-    padding: 3%;
+    padding-top: 3em;
+    padding-right: 1em;
 }
 
 #section_homepage  table {
