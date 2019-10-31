@@ -16,4 +16,37 @@
     max-width: 50%;
 }
 
+#section_titlepage #titlepage_middle_left{
+    display: flex;
+}
+
+#section_titlepage #titlepage_middle_left table{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 80%;
+    max-height: 80%
+}
+
+#section_titlepage #titlepage_middle_right{
+    text-align: center;
+}
+
+#section_titlepage button{
+    padding: 15px;
+    width: 15em;
+}
+
+#title_frame_youtube{
+    padding-top: 1em;
+    padding-left: 5em;
+    border-style: none;
+}
+
+#titlepage_button_div{
+    margin-top: 20%;
+    text-align: center;
+    display: inline-flex;
+}
+
+
 /* TODO: Abstand zwischen Einträgen in Tabelle */
