@@ -61,7 +61,9 @@ let safeEventListener = (event) =>
       let songTime = new Date();
 
       if(songTitel=="" || songArtist==""){
-          alert("Bitte Titel und Interpreten eingeben!")
+          alert("Bitte Titel und Interpreten eingeben!");
+          document.getElementById("cell_title_value").value='';
+          document.getElementById("cell_artist_value").value='';
           return false;
       }else{
 
