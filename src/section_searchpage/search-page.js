@@ -42,6 +42,7 @@ class SearchPage {
     onLeave(goon) {
       document.getElementById("search_bar").value = "";
         document.getElementById("search_table").innerHTML = "";
+        document.getElementById("search_bar").removeEventListener();
       return true;
     }
 
