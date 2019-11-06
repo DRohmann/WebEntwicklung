@@ -40,10 +40,6 @@ class DB{
     updateSong(id, song){
         return _db.collection("Songs").doc(id).update(song);
     }
-
-    findPossibleSongs(keyword){
-        return true;
-    }
 }
 
 export default DB;
