@@ -31,18 +31,21 @@ class SearchPage {
     }
 
     onLoad() {
+        if (!document.getElementById("search_bar").getAttribute('hasEventListener')) {
       document.getElementById("search_bar").addEventListener("keypress", (event) => {
+          document.getElementById("search_bar").setAttribute('hasEventListener', true);
           if (event.key == 'Enter') {
+              console.log("Enter pressed");
               searchTitle();
           }
       } );
+  }
       return;
     }
 
     onLeave(goon) {
       document.getElementById("search_bar").value = "";
         document.getElementById("search_table").innerHTML = "";
-        document.getElementById("search_bar").removeEventListener();
       return true;
     }
 
@@ -54,6 +57,9 @@ class SearchPage {
   let searchTitle = () => {
     let input = document.getElementById("search_bar").value.toUpperCase();
     let table = document.getElementById("search_table");
+    while(table.firstChild) {
+        table.removeChild(table.firstChild);
+    }
     table.innerHTML = "";
     _db.getAllSongs().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
