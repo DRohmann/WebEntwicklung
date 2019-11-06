@@ -35,6 +35,7 @@
 #section_titlepage button{
     padding: 15px;
     width: 15em;
+    margin: 5%;
 }
 
 #title_frame_youtube{
@@ -44,8 +45,9 @@
 }
 
 #titlepage_button_div{
-    margin-top: 20%;
-    text-align: center;
+    margin-top: 10%;
+    margin-left: 4em;
+    align-content: center;
     display: inline-flex;
 }
 
