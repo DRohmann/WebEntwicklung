@@ -51,7 +51,7 @@ class HomePage {
   let fillTable = () =>
     {
       let table = document.getElementById("start_right_title_table");
-      _db.getAllSongsTimestamp().then(function (querySnapshot) {
+      _db.getTenSongsTimestamp().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
           var row = document.createElement("TR");
           var title = document.createElement("TD");
