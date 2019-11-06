@@ -21,6 +21,7 @@
 }
 
 #section_titlepage #titlepage_middle_left table{
+    margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
     height: 80%;
@@ -46,6 +47,13 @@
     margin-top: 20%;
     text-align: center;
     display: inline-flex;
+}
+
+#title_cell_lyrics{
+    background: none;
+    border: none;
+    outline: 0 none;
+    color: white;
 }
 
 
