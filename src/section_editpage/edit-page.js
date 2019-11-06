@@ -60,6 +60,11 @@ let safeEventListener = (event) =>
       let songYT = document.getElementById("cell_youtube_value").value;
       let songTime = new Date();
 
+      if(songTitel=="" || songArtist==""){
+          alert("Bitte Titel und Interpreten eingeben!")
+          return false;
+      }else{
+
       let song = {
           "TITLE": songTitel,
           "ARTIST": songArtist,
@@ -81,6 +86,7 @@ let safeEventListener = (event) =>
               _app._router.navigate("/title/" + _id);
           });
       }
+  }
   }
 
 export default EditPage;
