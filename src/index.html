@@ -43,15 +43,18 @@
             </section>
 
             <section class="hidden" id="section_searchpage">
-                <div class="search" id="search_top">
-                    <input type="search" placeholder="Search packages"/>
-                </div>
-                <div class="search" id="search_middle">
-                    <textarea id="search_textarea" name="text" cols="35" rows="4"></textarea>
-                </div>
-                <div class="search" id="search_bottom">
-                    <button class="button" type="button" name="search_b_start">Zurück zur Startseite!</button>
-                    <button class="button" type="button" name="search_b_edit">Leg deinen Song an!</button>
+                <div id="search_flex">
+                    <div class="search" id="search_top">
+                        <input id="search_bar" type="search" placeholder="Was suchst du?"/>
+                    </div>
+                    <div class="search" id="search_middle">
+                        <table id="search_table">
+                        </table>
+                    </div>
+                    <div class="search" id="search_bottom">
+                        <button class="button" type="button" id="search_b_start">Zurück zur Startseite!</button>
+                        <button class="button" type="button" id="search_b_edit">Leg deinen Song an!</button>
+                    </div>
                 </div>
             </section>
 

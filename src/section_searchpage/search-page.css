@@ -1,0 +1,36 @@
+#search_flex {
+    float:left;
+    width: 100%;
+}
+
+#search_bar {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    width: 90%;
+    margin: 5%;
+    margin-top: 2em;
+    margin-bottom: 0%;
+}
+
+#search_table {
+    border: 1px solid black;
+    background-color: white;
+    width: 90%;
+    margin: 5%;
+    margin_top: 2em;
+    margin-bottom: 0%;
+
+}
+
+#search_bottom {
+    margin-top: 1%;
+}
+
+#search_b_start {
+    margin-left: 5em;
+}
+
+#search_b_edit {
+    margin-left: 5em;
+}

@@ -31,10 +31,17 @@ class SearchPage {
     }
 
     onLoad() {
+      document.getElementById("search_bar").addEventListener("keypress", (event) => {
+          if (event.key == 'Enter') {
+              searchTitle();
+          }
+      } );
       return;
     }
 
     onLeave(goon) {
+      document.getElementById("search_bar").value = "";
+        document.getElementById("search_table").innerHTML = "";
       return true;
     }
 
@@ -43,31 +50,31 @@ class SearchPage {
     }
   }
 
-  let onFinishedLoading = (receipes) =>
-    {
-      /*receipes.forEach(function(doc) {
-        let list = document.getElementById("receipe-list");
-        let table = document.getElementById("receipe-table");
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data().name);
-
-        let receipe= document.getElementById("dummy").cloneNode(true);
-        receipe.setAttribute("id", "receipe_" + doc.id);
-        table.appendChild(receipe);
-
-        document.querySelectorAll("#receipe_" + doc.id + " > .name")[0].textContent = doc.data().name;
-        let buttons = document.querySelectorAll("#receipe_" + doc.id +" > .links a");
-        buttons[0].setAttribute("href", "/receipe/show/" + doc.id);
-        buttons[1].setAttribute("href", "/receipe/edit/" + doc.id);
-        buttons[2].setAttribute("href", "/receipe/delete/" + doc.id);
-
-        });*/
-        /*Rauskommentiert da unnötig für uns, hier würde ja dann eher
-        sowas rein kommen */
-
-        _app._router.updatePageLinks();
-        console.log("Alle Page Links updated");
-    }
-
+  let searchTitle = () => {
+    let input = document.getElementById("search_bar").value.toUpperCase();
+    let table = document.getElementById("search_table");
+    table.innerHTML = "";
+    _db.getAllSongs().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
+        if (doc.data().TITLE.toUpperCase().includes(input) ||
+            doc.data().ARTIST.toUpperCase().includes(input) ||
+            doc.data().ALBUM.toUpperCase().includes(input))
+        {
+            var row = document.createElement("TR");
+            var title = document.createElement("TD");
+            title.appendChild(document.createTextNode(doc.data().TITLE));
+            row.appendChild(title);
+            var artist = document.createElement("TD");
+            artist.appendChild(document.createTextNode(doc.data().ARTIST));
+            row.appendChild(artist);
+            var album = document.createElement("TD");
+            album.appendChild(document.createTextNode(doc.data().ALBUM));
+            row.addEventListener("click", () => { _app._router.navigate("/title/" + doc.id) } );
+            row.appendChild(album);
+            table.appendChild(row)
+        }
+      });
+    });
+  }
 
 export default SearchPage;
