@@ -16,13 +16,6 @@ class HomePage {
       // Anzuzeigende HTML-Elemente ermitteln
       let section = document.querySelector("#section_homepage").cloneNode(true);
 
-      /*_db.getAllReceipes().then(function(querySnapshot)
-      {
-        console.log("Receipes loaded");
-        onFinishedLoading(querySnapshot);
-      });*/
-      //Rauskommentiert da unnötig für uns, eher für Suchen- oder Startseite
-
       return {
           className: "section_homepage",
           topbar: section.querySelectorAll("header > *"),

@@ -31,22 +31,24 @@ class SearchPage {
     }
 
     onLoad() {
-        if (!document.getElementById("search_bar").getAttribute('hasEventListener')) {
-      document.getElementById("search_bar").addEventListener("keypress", (event) => {
-          document.getElementById("search_bar").setAttribute('hasEventListener', true);
-          if (event.key == 'Enter') {
+    if (!document.getElementById("search_bar").getAttribute('hasEventListener')) {
+        document.getElementById("search_bar").addEventListener("keypress", (event) => {
+            document.getElementById("search_bar").setAttribute('hasEventListener', true);
+            if (event.key === 'Enter') {
               console.log("Enter pressed");
               searchTitle();
-          }
-      } );
-  }
+            }
+        } );
+    }
+    document.getElementById("search_b_start").addEventListener("click", () => { _app._router.navigate("/") } );
+    document.getElementById("search_b_new").addEventListener("click", () => {_app._router.navigate("/new") } );
       return;
     }
 
     onLeave(goon) {
-      document.getElementById("search_bar").value = "";
+        document.getElementById("search_bar").value = "";
         document.getElementById("search_table").innerHTML = "";
-      return true;
+        return true;
     }
 
     get title() {
