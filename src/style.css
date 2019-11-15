@@ -97,7 +97,8 @@ footer {
 }
 
 #bottom_left ul li{
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #bottom_middle {
@@ -117,4 +118,12 @@ footer {
     text-align: right;
     margin: auto;
     padding-right: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+#copyright{
+    font-size: 13.3333333333px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 1px;
 }
